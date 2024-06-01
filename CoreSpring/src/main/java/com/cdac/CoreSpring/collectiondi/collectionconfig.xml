@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans 
+xmlns="http://www.springframework.org/schema/beans"
+xmlns:p="http://www.springframework.org/schema/p"
+xmlns:util="http://www.springframework.org/schema/util"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"    
+      xsi:schemaLocation="http://www.springframework.org/schema/beans
+      http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+      http://www.springframework.org/schema/util
+      http://www.springframework.org/schema/util/spring-util-4.0.xsd">      
+     
+     <util:list id="list" list-class="java.util.ArrayList">
+       <value> 9984015147</value>
+     <value> 8800121546</value>
+     <value> 7410236514</value>
+     </util:list>
+    
+     <util:set id="set" set-class="java.util.HashSet">
+     <value>Mumbai</value>
+     <value> NewDelhi</value>
+     <value> Bangluru</value>
+     </util:set>
+     <bean name="stu1" class="com.cdac.CoreSpring.collectiondi.Student">
+     
+     <property name="name" value="Himanshu"/>
+     
+     <property name="phno">
+   <ref bean="list"></ref>
+     </property>
+     
+     <property name="address">
+    <ref bean="set"></ref>
+     </property>
+     
+     <property name="course">
+     <map>
+     <entry key="pgdca" value="6months"></entry>
+     <entry key="mca" value="3years"></entry>
+     </map>
+     </property>
+     </bean> 
+         
+      
+      
+    </beans>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans 
+xmlns="http://www.springframework.org/schema/beans"
+xmlns:c="http://www.springframework.org/schema/c"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"    
+      xsi:schemaLocation="http://www.springframework.org/schema/beans
+      http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+    
+  <bean id="d1" class="com.cdac.CoreSpring.constructordi.Department" c:deptid="100" c:manager="Mrs.P.Cindraella">
+  </bean>
+    
+      
+  <bean id="emp1" class="com.cdac.CoreSpring.constructordi.Employee">
+  <constructor-arg type="int" value="1"/>
+  <constructor-arg type="java.lang.String" value="Sobhna Singh"/>
+  <constructor-arg type="double" value="35960.2563"/> 
+  <constructor-arg ref="d1"></constructor-arg>
+  </bean>    
+  
+  <bean id="emp2" class="com.cdac.CoreSpring.constructordi.Employee">
+  <constructor-arg index="0" value="2"/>
+  <constructor-arg index="1" value="Raju Singh"/>
+  <constructor-arg index="2" value="45960.256"/>
+   <constructor-arg ref="d1"></constructor-arg>
+  </bean>
+      
+      
+     </beans> 
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
